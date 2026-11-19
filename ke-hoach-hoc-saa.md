@@ -35,7 +35,27 @@ SAA là mũi nhọn phụ, song song với ưu tiên chính (Python, eval, AI Re
 - Hỗ trợ trực tiếp mảng AI Reliability: chịu lỗi khi provider sập, kiểm soát chi phí, cách ly dữ liệu nhạy cảm.
 - Dùng được ngay ở công việc hiện tại: tham gia thảo luận kiến trúc trong team, từ đó nhận thêm việc backend hoặc AI.
 
-**Giới hạn:** chứng chỉ chỉ giúp qua vòng lọc CV. Để thắng ở vòng phỏng vấn, bạn cần bằng chứng: kiến trúc Family Finance dựng bằng CDK, bài so sánh VPS và AWS, và tài liệu thiết kế cho tải lớn.
+### SAA trong lộ trình AI Product Engineering
+
+SAA không dạy phần lõi AI. SAA dạy cách đưa tính năng AI tới người dùng thật một cách ổn định, an toàn và có lãi.
+
+| Lớp của AI Product Engineer | Hiện tại | SAA giúp |
+|---|---|---|
+| UX cho AI, agent/RAG, eval | Mạnh | Không |
+| Chạy production: chịu lỗi, scale, bảo mật | Mới trên VPS | Có |
+| Chi phí và unit economics | Mới ở mức token budget | Có |
+
+**Áp vào sản phẩm:**
+
+- **Chi phí:** tính được chi phí mỗi household mỗi tháng, gồm cả token lẫn hạ tầng, rồi từ đó định giá gói.
+- **Độ tin cậy:** việc dài chạy qua hàng đợi và worker tự scale; khi provider LLM sập thì có timeout, retry, fallback; SSE dài qua load balancer; checkpoint có RPO/RTO rõ ràng.
+- **Niềm tin:** IAM role thay cho API key, KMS, cách ly tenant, vị trí lưu dữ liệu, và Bedrock qua PrivateLink để trả lời bảng câu hỏi bảo mật của khách B2B.
+- **Tải đột biến:** hàng đợi, autoscaling, cache, rate limit giúp hệ thống không sập và hóa đơn LLM không tăng vọt.
+- **Giao tiếp:** có ngôn ngữ chung để đề xuất kiến trúc với team platform.
+
+**Trọng tâm khi học:** học sâu hàng đợi và xử lý bất đồng bộ, chi phí, IAM và bảo mật dữ liệu, load balancer với streaming, DR, Bedrock. Direct Connect, Snow family, Storage Gateway chỉ cần học đủ để thi.
+
+**Giới hạn:** SAA không dạy eval, guardrail, observability cho LLM hay cảm quan sản phẩm. Đó vẫn là ưu tiên chính, và là thứ làm bạn khác biệt. Chứng chỉ chỉ giúp qua vòng lọc CV. Để thắng ở vòng phỏng vấn, bạn cần bằng chứng: kiến trúc Family Finance dựng bằng CDK, bài so sánh VPS và AWS, và tài liệu thiết kế cho tải lớn.
 
 ## 3. Áp dụng vào Family Finance
 
@@ -168,7 +188,7 @@ SAA không được chiếm hết thời gian của Python và eval. Hai mảng 
 **Sau khi thi, đây là lúc kiến thức SAA biến thành giá trị trên CV:**
 
 1. Viết bài **so sánh VPS và AWS** cho Family Finance (chi phí, độ phức tạp, khi nào nên chuyển) và đăng lên blog Hanu NUS.
-2. Viết **tài liệu thiết kế cho tải lớn** (10x, 100x, 1000x) để mang đi phỏng vấn.
+2. Viết **tài liệu thiết kế cho tải lớn** để mang đi phỏng vấn: "Family Finance trên AWS: chi phí cho mỗi household, chiến lược khi provider LLM sập, và cái gì vỡ ở tải 10x, 100x, 1000x". Tài liệu này cho thấy bạn làm được cả phần AI lẫn phần production, tức là bằng chứng mạnh nhất cho hồ sơ AI Product Engineer.
 3. **Thêm Bedrock** vào lớp multi-provider sẵn có: gọi model qua PrivateLink, xác thực bằng IAM thay cho API key, xử lý quota và throttling, thử cross-region inference. Đây là dự án vừa thuộc SAA vừa thuộc AI Reliability.
 4. Viết lại phần hạ tầng bằng **Terraform**.
 5. **Học Kubernetes trên home server:** dựng cluster nhẹ bằng k3s, deploy lại Family Finance lên đó, rồi so với bản ECS trên AWS. Sau SAA, K8s sẽ dễ hiểu hơn vì bạn đã nắm load balancing, autoscaling, service discovery và networking; K8s chỉ là cách khác để làm những việc đó. Đáng học vì nhiều công ty vừa và lớn ở Việt Nam chạy K8s, và mảng AI infra (serving model, quản lý GPU) cũng xoay quanh K8s. Sau đó học EKS nếu muốn.
