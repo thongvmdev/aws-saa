@@ -15,7 +15,7 @@ SAA là mũi nhọn phụ, song song với ưu tiên chính (Python, eval, AI Re
 
 **Thứ tự tổng thể:** ôn mạng cơ bản (nếu cần) → SAA → K8s trên home server (k3s) → EKS nếu muốn.
 
-**Thời gian:** 8 tuần, 8–10 giờ mỗi tuần, tức khoảng 70 giờ. Cần chấp nhận một điều: trong 8 tuần này SAA sẽ chiếm phần lớn thời gian, phần AI chỉ còn khoảng một buổi cuối tuần. Nếu muốn giữ nhịp cho AI, hãy giãn ra 10 tuần bằng cách tách tuần 3–4 và tuần 7 thành hai tuần mỗi phần.
+**Thời gian:** 5 tháng, từ 01/12/2026 đến cuối 04/2027, thi khoảng tháng 05/2027. Mỗi tuần khoảng 1h15 video (tối trong tuần 20–30 phút) và 2–3 giờ lab cuối tuần. Nhịp này nhẹ hơn để vẫn giữ được thời gian cho Python và eval. Lộ trình chi tiết ở [chien-luoc-hoc-ap-dung-p-resume.md](chien-luoc-hoc-ap-dung-p-resume.md), checklist bài học ở [udemy-saa-c03-checklist.md](udemy-saa-c03-checklist.md).
 
 ## 2. Kiến thức SAA và giá trị cho sự nghiệp
 
@@ -57,7 +57,11 @@ SAA không dạy phần lõi AI. SAA dạy cách đưa tính năng AI tới ngư
 
 **Giới hạn:** SAA không dạy eval, guardrail, observability cho LLM hay cảm quan sản phẩm. Đó vẫn là ưu tiên chính, và là thứ làm bạn khác biệt. Chứng chỉ chỉ giúp qua vòng lọc CV. Để thắng ở vòng phỏng vấn, bạn cần bằng chứng: kiến trúc Family Finance dựng bằng CDK, bài so sánh VPS và AWS, và tài liệu thiết kế cho tải lớn.
 
-## 3. Áp dụng vào Family Finance
+## 3. Áp dụng vào p-resume (dự án lab chính)
+
+Chiến lược áp dụng và kiến trúc mục tiêu trên AWS nằm ở [chien-luoc-hoc-ap-dung-p-resume.md](chien-luoc-hoc-ap-dung-p-resume.md).
+
+## 3b. Áp dụng vào Family Finance
 
 **Kiến trúc mục tiêu:**
 
@@ -155,24 +159,13 @@ Dùng AI để **bổ sung** cho khóa học, không thay thế. AI dễ sai ở
 - *Luyện đề:* "Ra 5 câu tình huống kiểu SAA-C03, mỗi câu có 2 đáp án đều chạy được và chỉ phân biệt bằng từ khóa như 'chi phí thấp nhất' hoặc 'ít vận hành nhất'. Chưa đưa đáp án. Sau khi tôi trả lời, chấm nghiêm và giải thích vì sao 3 đáp án còn lại sai."
 - *Tự kiểm tra:* "Tôi sẽ giải thích lại [X]. Chỉ ra chỗ tôi hiểu sai hoặc còn thiếu. Đừng khen."
 
-## 9. Lộ trình 8 tuần
+## 9. Lộ trình 5 tháng (12/2026 – 05/2027)
 
-Tối trong tuần (khoảng 1 giờ mỗi tối) xem video và học cùng AI. Cuối tuần làm lab. Các chủ đề ghi "lý thuyết" không có trong Family Finance nhưng đề hỏi nhiều, nên chỉ học bằng video và đề luyện, không làm lab.
-
-| Tuần | Chủ đề | Lab cuối tuần |
-|---|---|---|
-| 1 | IAM, cấu trúc tài khoản, Budgets. *Lý thuyết:* Organizations/SCP, Control Tower | Tạo tài khoản theo checklist ở mục 4; cài CDK, bootstrap, deploy rồi destroy một stack nhỏ |
-| 2 | VPC, Route 53. *Lý thuyết:* VPN, Direct Connect, Transit Gateway | CDK: VPC public/private, security group nối chuỗi, 1 NAT; thử VPC endpoint cho S3 và ECR |
-| 3 | EC2, ASG, ELB, ECS/Fargate, ECR | NestJS API và LangGraph server trên Fargate sau ALB; thử idle timeout với SSE kèm heartbeat; đẩy image lên ECR |
-| 4 | RDS, Aurora, read replica, DynamoDB | Home server: MySQL replication. AWS (gom một buổi): RDS kèm read replica, thử failover Multi-AZ. Viết ADR chọn chỗ chạy Weaviate và cách xử lý read-your-writes |
-| 5 | S3, EBS/EFS, ElastiCache, CloudFront. *Lý thuyết:* Kinesis, Athena, Glue, Redshift, DMS, DataSync, Snow family | Upload qua presigned URL; chuyển sang ElastiCache với hash tag. **Bắt đầu làm đề Tutorials Dojo** |
-| 6 | SQS, SNS, EventBridge, DR (RPO/RTO). *Lý thuyết:* Storage Gateway, AWS Backup | Scheduled job bằng EventBridge Scheduler; viết một trang chiến lược DR cho Family Finance |
-| 7 | KMS, WAF, GuardDuty, CloudWatch, CloudTrail, tối ưu chi phí. *Lý thuyết:* các dịch vụ AI/ML có sẵn | Gộp thành staging hoàn chỉnh; load test bằng k6 với mock LLM; xem Cost Explorer |
-| 8 | Luyện đề | Làm đề trọn bộ theo thời gian thật; ôn các mảng yếu theo sổ tay |
+Lộ trình theo tháng (section cần học và phần p-resume đưa lên AWS) nằm ở [chien-luoc-hoc-ap-dung-p-resume.md](chien-luoc-hoc-ap-dung-p-resume.md).
 
 ## 10. Luyện đề và đăng ký thi
 
-- Bắt đầu làm đề từ tuần 5 để sớm thấy mảng nào đang yếu.
+- Làm quiz cuối mỗi section ngay khi học xong. Bắt đầu làm đề Tutorials Dojo theo mảng từ tháng 3/2027, vì học đến cuối tháng 4 thì không còn tháng riêng nào để luyện đề.
 - Giá trị nằm ở phần **đọc giải thích**, kể cả với câu làm đúng. Với mỗi câu, hiểu vì sao ba đáp án còn lại sai.
 - Đề SAA thường có hai đáp án đều chạy được. Điểm phân biệt nằm ở từ khóa như "chi phí thấp nhất", "ít vận hành nhất", "độ trễ thấp nhất".
 - Nếu điểm Tutorials Dojo thấp hơn điểm khi luyện với AI, nghĩa là AI đang hỏi quá dễ.
@@ -183,7 +176,7 @@ Tối trong tuần (khoảng 1 giờ mỗi tối) xem video và học cùng AI. 
 
 ## 11. Giữ đúng ưu tiên và việc sau khi thi
 
-SAA không được chiếm hết thời gian của Python và eval. Hai mảng gặp nhau ở tuần 7, khi load test với mock LLM cũng chính là bài tập AI Reliability.
+SAA không được chiếm hết thời gian của Python và eval. Hai mảng gặp nhau ở tháng 3/2027, khi thêm Bedrock và rate limit cho các route AI của p-resume cũng chính là bài tập AI Reliability.
 
 **Sau khi thi, đây là lúc kiến thức SAA biến thành giá trị trên CV:**
 
