@@ -17,8 +17,8 @@ _1 / 6 | 15min_
 
 - [ ] 1. [Course Introduction - AWS Certified Solutions Architect Associate](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/13528014) · 4min
 - [] 2. [PLEASE READ: Lectures you can skip if you took a course from me before](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/20326943) 📄 · 2min
-- [ ] 3. [Creating an AWS Account](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/13541138) · 4min
-- [ ] 4. [AWS Account Activation Troubleshooting](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/17271462) 📄 · 2min
+- [x] 3. [Creating an AWS Account](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/13541138) · 4min
+- [x] 4. [AWS Account Activation Troubleshooting](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/17271462) 📄 · 2min
 - [ ] 5. [Important Message](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/13541136) · 1min
 - [ ] 6. [About your instructor](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/17956610) · 3min
 
