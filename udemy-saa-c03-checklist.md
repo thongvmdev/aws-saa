@@ -11,30 +11,32 @@ Synced from Udemy on 2026-11-23 · **1 / 428 done** · 33 sections · 27hr 25min
 
 Legend: 📄 article · ❓ quiz · 📝 practice exam. Tick `[x]` as you finish lectures.
 
-## Section 1: Introduction - AWS Certified Solutions Architect Associate
+## Target today
+
+- Video by video > Section 3
+
+## [x] Section 1: Introduction - AWS Certified Solutions Architect Associate
 
 _1 / 6 | 15min_
 
-- [ ] 1. [Course Introduction - AWS Certified Solutions Architect Associate](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/13528014) · 4min
-- [] 2. [PLEASE READ: Lectures you can skip if you took a course from me before](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/20326943) 📄 · 2min
+- [x] 1. [Course Introduction - AWS Certified Solutions Architect Associate](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/13528014) · 4min
 - [x] 3. [Creating an AWS Account](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/13541138) · 4min
 - [x] 4. [AWS Account Activation Troubleshooting](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/17271462) 📄 · 2min
-- [ ] 5. [Important Message](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/13541136) · 1min
-- [ ] 6. [About your instructor](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/17956610) · 3min
+- [x] 5. [Important Message](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/13541136) · 1min
 
-## Section 2: Code & Slides Download
+## [x] Section 2: Code & Slides Download
 
 _0 / 1 | 1min_
 
-- [ ] 7. [Slides and Code Download](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/13541142) 📄 · 1min
+- [x] 7. [Slides and Code Download](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/13541142) 📄 · 1min
 
-## Section 3: Getting started with AWS
+## [x] Section 3: Getting started with AWS
 
 _0 / 3 | 13min_
 
-- [ ] 8. [AWS Cloud Overview - Regions & AZ](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/26097978) · 8min
-- [ ] 9. [[Important] AWS Console UI Update](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/47890667) · 1min
-- [ ] 10. [Tour of the AWS Console & Services in AWS](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/26097980) · 4min
+- [x] 8. [AWS Cloud Overview - Regions & AZ](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/26097978) · 8min
+- [x] 9. [[Important] AWS Console UI Update](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/47890667) · 1min
+- [x] 10. [Tour of the AWS Console & Services in AWS](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/26097980) · 4min
 
 ## Section 4: IAM & AWS CLI
 
